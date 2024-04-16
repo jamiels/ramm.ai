@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallets</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>Wallets</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>TX Count</th>
+                    <th>PVT Balance</th>
+                    <th>USDC Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for w in wallets.values() %}
+                <tr>
+                    <td><a href="/wallet/tx/{{w.name}}">{{w.name}}</a></td>
+                    <td>{{w.address}}</td>    
+                    <td>{{w.transactions | length}}</td>
+                    <td>{{w.pvt_balance}}</td> 
+                    <td>{{w.usdc_balance}}</td>           
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

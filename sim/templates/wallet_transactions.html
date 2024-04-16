@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wallet History</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>Wallet History</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>TX Seq ID</th>
+                    <th>Pool</th>
+                    <th>Action</th>
+                    <th>Price</th>
+                    <th>PVT Balance</th>
+                    <th>USDC Balance</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tx in txs %}
+                <tr>
+                    <td>{{tx.tx_seq_id}}</a></td>
+                    <td>{{tx.pool_name}}</td>                    
+                    <td>{{tx.action}}</td>
+                    <td>{{tx.price}}</td>
+                    <td>{{tx.pvt_balance}}</td>
+                    <td>{{tx.usdc_balance}}</td>                
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

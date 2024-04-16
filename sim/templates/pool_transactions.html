@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    
+</head>
+<body>
+    <div class="container-fluid">
+        <h2>Transaction History</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>TX Seq ID</th>
+                    <th>Timestamp</th>
+                    <th>Counterparty</th>
+                    <th>Action</th>
+                    <th>Price</th>
+                    <th>x</th>
+                    <th>Total AFS</th>
+                    <th>RT Bot</th>
+                    <th>RT Sold</th>
+                    <th>Secondary Mode</th>
+                    <th>Treasury</th>
+                    <th>P'</th>
+                    <th>P"</th>
+                    <th>P Unadjusted</th>
+                    <th>Price if Primary Mode</th>
+                    <th>Price if Secondary Mode</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for tx in txs %}
+                <tr>
+                    <td>{{tx.tx_seq_id}}</a></td>
+                    <td>{{tx.timestamp}}</td>
+                    <td>{{tx.counterparty.name}}</td>
+                    <td>{{tx.action}}</td>
+                    <td>{{tx.price}}</td>
+                    <td>{{tx.x}}</td>
+                    <td>{{tx.total_afs}}</td>
+                    <td>{{tx.rt_bought}}</td>
+                    <td>{{tx.rt_sold}}</td>
+                    <td>{{tx.is_secondary_mode}}</td>
+                    <td>{{tx.treasury}}</td>    
+                    <td>{{tx.p_prime}}</td>  
+                    <td>{{tx.p_doubleprime}}</td>  
+                    <td>{{tx.p_un}}</td>  
+                    <td>{{tx.price_if_primary}}</td>  
+                    <td>{{tx.price_if_secondary}}</td>                  
+
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

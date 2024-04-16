@@ -1,0 +1,49 @@
+<svg
+    className='rounded-full mr-2'
+    xmlns='http://www.w3.org/2000/svg'
+    x='0'
+    y='0'
+    height='24'
+    width='24'
+>
+    <rect
+        x='0'
+        y='0'
+        rx='0'
+        ry='0'
+        height='24'
+        width='24'
+        transform='translate(3.58064099454198 3.52187167729838) rotate(155.9 12 12)'
+        fill='#2477e1'
+    ></rect>
+    <rect
+        x='0'
+        y='0'
+        rx='0'
+        ry='0'
+        height='24'
+        width='24'
+        transform='translate(7.0247189465624436 -14.358447255034422) rotate(393.3 12 12)'
+        fill='#c7145c'
+    ></rect>
+    <rect
+        x='0'
+        y='0'
+        rx='0'
+        ry='0'
+        height='24'
+        width='24'
+        transform='translate(-17.38126979634894 -8.666666587006299) rotate(289.4 12 12)'
+        fill='#f3ad00'
+    ></rect>
+    <rect
+        x='0'
+        y='0'
+        rx='0'
+        ry='0'
+        height='24'
+        width='24'
+        transform='translate(15.569874656032885 -23.697661207793633) rotate(438.4 12 12)'
+        fill='#fc1975'
+    ></rect>
+</svg>
